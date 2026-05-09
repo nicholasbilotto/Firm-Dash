@@ -1,62 +1,35 @@
-# Firm Dashboard App
+# TCC Operational Dashboard
 
-## Introduction
-I built this full stack Dashboard App on the MERN stack for a licensing firm. It's a mix of backend logic and frontend flair, showing off what I can do with, data visualizations and manipulation. Below, I've laid out what this app does, the tools I used, and a bit about how I put it together.
+A high performance business intelligence platform built for Transfer and Content Consultants (TCC). This dashboard centralizes contract management, royalty tracking, and product analytics into a unified MERN stack application.
 
 ## Key Features
-- **Interactive Data Tables**: Developed with Prime React, the table features multi-column filtering and dynamic dropdowns.
-- **Multi-Layer Backend Filtering and Pagination**: Demonstrates complex data management through advanced filtering capabilities.
-  - There was a ton of data to handle, over 15k rows, so the filtering, sorting and pagination, had to be built on the backend.
-- **Data Visualization**: Utilizes Nivo for dynamic, interactive charts, showcasing data in a meaningful way.
 
-- **Responsive Design**: Ensures a seamless user experience across various devices and screen sizes.
+- **Real Time Analytics:** Integrated data visualization using Nivo Charts for revenue breakdown and sales trends.
+- **Unified Data Source:** Synchronized with Airtable for flexible cloud based data management within a custom UI.
+- **Secure Authentication:** Robust user authentication and session management using JWT and Bcrypt.
+- **Responsive Design:** Fully adaptive interface built with Material UI (MUI), optimized for both desktop and mobile operations.
+- **Automated Calculations:** Real time calculation of Monthly and Yearly royalties with growth metric comparisons.
 
-## Technologies Used
-- **MERN Stack**: MongoDB, Express.js, React, Node.js
-- **Nivo**: For data visualization
-- **Prime React**: For advanced table functionalities
-- **Material UI** For theming, structure, handling mobile, and buttons
+## Tech Stack
 
-## Development Process
-1. **Planning**: The company was using 3 different sites to host spreadsheets related to different parts of their business. I organized and merged the data to be displayed in this app. Preproduction was mostly spend interpreting data and deciding what was most useful. This involved talking to all members of the team who uses this data everyday. 
-2. **Development**: This was built in React with Material UI. I spent a lot of time designing the Datatable shown in the screenshots. I ended up changing frameworks for more convinient visuals. Using PrimeReact, I only displayed fields that were populated in the row expansion. This saved space visually, allowing for faster browsing and discovery. I also built filters and sorting that lived on the backend.
+- **Frontend:** React.js, Redux Toolkit (RTK Query), Material UI, Nivo Charts
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (Mongoose ODM)
+- **Integrations:** Airtable API
 
+## Installation and Setup
 
-## Future Enhancements
-Due to the amount of data this company has, I plan to use LangChain to connect a LLM to futher interpret the data to accurately forcast trends.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nicholasbilotto/CLIDash.git
+   ```
+2. **Setup Backend:**
+   - Navigate to `/server`
+   - Create a `.env` file with `MONGO_URL` and `PORT`.
+   - Run `npm install` and `npm start`.
+3. **Setup Frontend:**
+   - Navigate to `/client`
+   - Run `npm install` and `npm start`.
 
-## Screenshots
-Below are some screenshots demonstrating the key functionalities of the app:
-
-1. **Dashboard (Home Page)**
-   ![Dashboard](/screenshots/Dashboard.png)
-
-2. **Datatable**
-   ![Datatable](/screenshots/DataTable.png)
-
-3. **Datatable (One Filter Active)**
-   ![Datatable with One Filter Active](/screenshots/One-Filter.png)
-
-4. **Datatable (Two Filters Active)**
-   ![Datatable with Two Filters Active](/screenshots/Two-Filters.png)
-
-5. **Datatable (Dynamic Row Expansion)**
-   ![Datatable Dynamic RowExpansion](/screenshots/Row-Expansion.png)
-
-6. **Edit Subject Page (Tutor-Side)**
-   ![Admin Edit Subject](/screenshots/Editing-Math.png)
-
-7. **Line Graph** 
-   ![Line Graph](/screenshots/Line-Graph.png)
-
-8. **Pie Chart** 
-   ![Pie Chart](/screenshots/Pie-Chart.png)
-
-9. **Dashboard (isMobile)**
-   ![Dashboard isMobile](/screenshots/isMobile.png) 
-
-10. **Dashboard DarkMode**
-   ![Dashboard DarkMode](/screenshots/Dash-DarkMode.png)
-
-
-
+---
+*Built by Nicholas Bilotto*
